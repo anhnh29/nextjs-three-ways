@@ -5,7 +5,6 @@ import { Head } from 'next/head';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const getPokemonDetail = async (params) => {
-  console.log('params123', params);
   if (params) {
     const { data } = await axios.get(`/api/pokemon?name=${params?.queryKey}`);
     return data;
